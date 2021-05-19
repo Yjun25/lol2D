@@ -14,6 +14,10 @@ public class Nexus extends Destructible {
   public int teamOfNexus() {
     return teamID;
   }
+  // set a condition for when the nexus's hp is below 10
+  public boolean isLowHP(){
+    return currentHP()<=10;
+  }
 
   @Override public void accept(TileVisitor visitor) {
     visitor.visitNexus(this);
